@@ -1,0 +1,33 @@
+<header class="detail-header">
+
+  <main am-trianglify='{"name": "{{detail.data.name}}"}' class="clearfix">
+    <span class="icon" am-load-icon="{{detail.data.id}}"></span>
+    <article>
+      <h2>{{detail.data.name}}</h2>
+      <p>{{detail.data.summary}}</p>
+      <ul>
+        <am-indicator title="Sonar" type="dashboard" value="53"></am-indicator>
+        <am-indicator title="Jenkins" type="refresh" value="41"></am-indicator>
+        <am-indicator title="Follows" type="eye" value="20"></am-indicator>
+        <am-indicator title="Favorites" type="heart" value="25"></am-indicator>
+        <am-indicator title="Likes" type="thumbs-up" value="15"></am-indicator>
+      </ul>
+    </article>
+
+    <aside>
+    &nbsp;
+    </aside>
+  </main>
+
+  <footer class="clearfix">
+    <article>
+      <a ui-sref="main.list">Projects</a> > {{detail.data.name}}
+    </article>
+    <aside>
+      <a href=""><i class="fa fa-heart"></i> Add to Favorites</a>
+      <a href=""><i class="fa fa-thumbs-up"></i> Like</a>
+      <a href=""><i class="fa fa-eye"></i> Follow</a>
+    </aside>
+  </footer>
+
+</header>

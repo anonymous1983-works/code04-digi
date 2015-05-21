@@ -1,0 +1,108 @@
+.global-filter {
+  li,
+  .btn-group {
+    float: left;
+    &.filter-show{
+      float: right;
+    }
+    a,
+    .btn {
+      padding: 0 15px;
+      line-height: @page-sub-header-height;
+      //border-left: 1px solid @base-color-border;
+      color: #FFFFFF;
+      display: block;
+      float: left;
+      position: relative;
+      .user-select(none);
+    }
+    .btn {
+      &:last-child{
+        //border-right: 1px solid @base-color-border;
+      }
+    }
+    input[type="radio"] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      & + label{
+        cursor: pointer;
+      }
+      &:checked + label {
+        color: @base-color-green-dark;
+      }
+    }
+    &.filter-group {
+      
+      .title,
+      .content{
+        float: left;
+      }
+      .title{
+        padding: 0 10px;
+        margin: 0;
+        line-height: 36px;
+        display: none;
+      }
+      input[type="radio"] {
+        &:checked + label {
+          background: #FFFFFF;
+          color: @base-color-green-dark;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            border: 2px solid @base-color-green-dark;
+          }
+        }
+      }
+    }
+    &.filter-search,
+    &.filter-application {
+      float: right;
+    }
+  }
+
+  .filter-application{
+    position: relative;
+    .drop-down-menu{
+      position: absolute;
+      top: 37px;
+      right: -1px;
+      background: #FFFFFF;
+      z-index: @base-z-index-10;
+      display: none;
+      min-width: 200px;
+      border: 1px solid @base-color-border;
+      border-top: 0;
+      li{
+        float: none;
+        display: block;
+        a{
+          display: block;
+          border: none;
+          float: none;
+        }
+      }
+    }
+
+    &:hover{
+      .drop-down-toggle{
+        &:after{
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          right: 0;
+          border: 1px solid #FFFFFF;
+        }
+      }
+      .drop-down-menu{
+        display: block;
+        .drop-shadow(0, 3px, 5px, 0.1);
+      }
+    }
+
+  }
+}

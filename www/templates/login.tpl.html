@@ -1,0 +1,90 @@
+<!-- START PAGE-CONTAINER -->
+<div class="login-wrapper">
+    <!-- START Login Background Pic Wrapper-->
+    <div class="bg-pic">
+
+        <!--<div id="chartZoom">
+            <a href="#" id="zoomIn">Zoom In</a> <a href="#" id="zoomOut">Zoom Out</a>
+        </div>
+
+        <div id="chart1" class='with-transitions'>
+            <svg></svg>
+        </div>-->
+
+
+
+
+        <!-- START Background Caption-->
+        <div class="bg-caption pull-bottom sm-pull-bottom text-white ">
+            <div class="login-digicode-caption">
+                <i class="logo">Digicode</i>
+            </div>
+        </div>
+        <!-- END Background Caption-->
+    </div>
+    <!-- END Login Background Pic Wrapper-->
+    <!-- START Login Right Container-->
+    <div class="login-container bg-white">
+        <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+            <img src="assets/images/common/digicode.logo.blue.svg" alt="logo" data-src="assets/img/logo.png"
+                 data-src-retina="assets/img/logo_2x.png">
+
+            <p class="p-t-5">Sign into your Account</p>
+            <!-- START Login Form -->
+            <form id="form-login" ng-submit="formLoginSubmit()" class="p-t-15" role="form">
+                <!-- START Form Control-->
+                <div class="form-group form-group-default">
+                    <label>Login</label>
+
+                    <div class="controls">
+                        <input type="text" name="username" placeholder="User Name" ng-model="userlog.login"
+                               class="form-control" required>
+                    </div>
+                </div>
+                <!-- END Form Control-->
+                <!-- START Form Control-->
+                <div class="form-group form-group-default">
+                    <label>Password</label>
+
+                    <div class="controls">
+                        <input type="password" class="form-control" name="password" ng-model="userlog.password"
+                               placeholder="Credentials" required>
+                    </div>
+                </div>
+                <!-- START Form Control-->
+                <div class="row">
+                    <div class="col-md-6 no-padding">
+                        <div class="checkbox ">
+                            <input type="checkbox" value="1" id="checkbox1">
+                            <label for="checkbox1">Keep Me Signed in</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Form Control-->
+                <button class="btn btn-complete btn-cons m-t-10" type="submit">Sign in</button>
+            </form>
+            <!--END Login Form-->
+            <div class="pull-bottom sm-pull-bottom">
+                <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
+                    <a href="#" class="text-info small">Help? Contact Support</a>
+
+                    <p class="small text-left">
+                        Images Displayed are solely for representation purposes only,
+                        <br/>
+                        All work copyright of © 2015
+                        <a target="_blank" href="http://www.amundi.fr/Sites/Hub/Amundi.fr/Footer/Quicklinks/Mentions-legales">
+                            Amundi </a> / Digicode.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Login Right Container-->
+</div>
+<!-- END PAGE CONTAINER -->
+<script>
+    $(function()
+    {
+        $('#form-login').validate()
+    })
+</script>

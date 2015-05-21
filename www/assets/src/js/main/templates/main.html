@@ -1,0 +1,59 @@
+<header id="page-header" class="header page-header clearfix">
+
+  <div class="header-left">
+    <div class="nav">
+      <a href="" class="fa fa-navicon"></a>
+    </div>
+    <h1 class="title"><a href=""><img src="assets/img/common/digicode.logo.svg" class="logo" alt="Digicode"></a></h1>
+  </div>
+
+
+
+  <div class="header-right">
+    <nav class="nav">
+      <ul class="clearfix">
+        <li class="alert hidden-xs"><a href="" class="fa fa-plus"></a></li>
+
+        <li class="visible-xs">
+          <a href="" ng-click="main.toggleSearch()" class="search fa fa-search"></a>
+        </li>
+
+        <li class="alert"><a href="" class="fa fa-bell-o"></a></li>
+        <li class="user">
+          <a href="">
+            <div class="hidden-xs">{{main.user.name}}<i class="fa fa-angle-down"></i></div>
+            <div class="visible-xs"><i class="fa fa-user"></i></div>
+          </a>
+
+          <div class="sub-nav">
+            <ul>
+              <li class="visible-xs"><div class="user-wrap">
+                <div class="avatar" style="background-image: url(https://git.intramundi.com/uploads/user/avatar/198/11138494_10205643170254638_8850473224442884809_n.jpg)"></div>
+                <div class="name">{{main.user.name}}</div>
+                <div class="email">{{main.user.email}}</div>
+              </div> </li>
+              <li><a ui-sref="login" class=""><i class="fa fa-power-off"></i>Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-search">
+    <form class="search-global">
+      <input
+      type="text"
+      class="form-control input"
+      ng-model="main.searchInput"
+      ng-model-options="{debounce: 300}"
+      ng-change="main.quickSearch()"
+      >
+      <i class="btn search fa fa-search hidden-xs"></i>
+      <input type="submit" class="form-control btn submit">
+    </form>
+  </div>
+
+</header>
+
+<section ui-view class="page-container"></section>

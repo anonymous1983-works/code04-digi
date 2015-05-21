@@ -1,0 +1,86 @@
+// Detail Header
+
+.detail-header {
+  main {
+    padding: 1em 1em 1em 2em;
+    height: 10em;
+    .icon {
+      background-repeat: none;
+      background-size: cover;
+      border: 2px solid @base-color-white;
+      .circular;
+      display: inline-block;
+      float: left;
+      height: 8em;
+      margin: 0 2em 0 0;
+      width: 8em;
+    }
+    article {
+      float: left;
+      width: 40%;
+      h2 {
+        font-size: 2em;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+      h2:first-letter {
+        font-weight: bold;
+      }
+      p {
+        margin: 0 0 0.6em;
+      }
+      ul {
+        li {
+          display: inline-block;
+          margin: 0 2em 0 0;
+          i {
+            margin: 0 0.2em 0 0;
+          }
+          strong {
+            cursor: default;
+          }
+        }
+        li:last-child {
+          margin: 0;
+        }
+      }
+    }
+    aside {
+      float: right;
+      width: 30%;
+    }
+  }
+
+  footer {
+    background-color: @base-color-green;
+    color: @base-color-white;
+    padding: 0.5em 2em;
+    article {
+      float: left;
+      padding: 0.5em 0;
+      a {
+        color: @base-color-white;
+        display: inline;
+        text-decoration: underline;
+      }
+    }
+    aside {
+      float: right;
+      a {
+        border-right: 1px solid @base-color-green-hover;
+        color: @base-color-white;
+        display: inline-block;
+        margin: 0 0.7em 0 0;
+        padding: 0.5em 0.7em 0.5em 0;
+      }
+      a:hover {
+        color: @base-color-green-dark;
+      }
+      a:last-child {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

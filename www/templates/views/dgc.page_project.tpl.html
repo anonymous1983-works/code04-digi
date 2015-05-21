@@ -1,0 +1,149 @@
+<div class="view-project-content">
+    <!-- START PROJECT HEADER -->
+    <div class="project-wrap-header">
+        <!-- style="{{'' | dgc_filter_background_gradient}}" -->
+        <div class="jumbotron " data-pages="parallax">
+            <!-- START BREADCRUMB -->
+            <ul class="breadcrumb">
+                <li><a href="{{ 'project_list' | dgc_filter_routing }}">Projects</a></li>
+                <li><a href="{{controllersproject.id | dgc_filter_url_project}}" class="active"
+                       ng-bind-html="controllersproject.name | dgc_filter_name_project"></a>
+                </li>
+            </ul>
+            <!-- END BREADCRUMB -->
+            <div class="container-fluid container-fixed-lg project-wrap-header-container project-user-profile">
+
+
+                <div class="inner p-t-10 p-b-10">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail-wrapper d198 circular bordered b-white bg-avatar avatar-project-sidebar-stat pull-right"
+                                     style="background-image: url('http://dev-digicode.intramundi.com/digicode/api/projects/{{controllersproject.id}}/icon')"></div>
+                            </div>
+                            <div class="col-md-9">
+
+                                <div class="panel-heading text-white">
+                                    <div class="panel-title"><h1 class="text-transform-none no-margin"
+                                                                 ng-bind-html="controllersproject.name | dgc_filter_name_project">
+                                    </h1>
+                                    </div>
+                                    <p class="panel-description project-description">{{controllersproject.summary}}</p>
+
+                                    <div class="clearfix">
+                                        <div class="pull-left">
+                                            <div class="clearfix p-b-10 p-l-10">
+                                            <ul class="indicateur-list list-horizontal navbar-left">
+                                                <li ng-repeat="environment in controllersproject.environment" on-finish-render="ngRepeatFinished">
+                                                    <a ng-href="{{environment.url}}" data-toggle="tooltip" data-original-title="{{environment.tool}}"
+                                                       target="_blank"><i
+                                                            class="fa " ng-class="environment.type | dgc_filter_environment_class"></i><span>{{ $index | dgc_filter_environment_note_test}}</span></a>
+                                                </li>
+                                            </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <ul class="project-wrap-nav-pills nav nav-pills">
+                                                <li>
+                                                    <button data-target="#modalWarningService"
+                                                            data-toggle="modal" class="btn btn-complete btn-cons btn-sm"><i
+                                                            class="fa fa-heart p-r-10"></i><span
+                                                            class="bold">Add to Favorites</span></button>
+                                                </li>
+                                                <li>
+                                                    <button data-target="#modalWarningService"
+                                                            data-toggle="modal" class="btn btn-complete btn-cons btn-sm"><i
+                                                            class="fa fa-eye p-r-10"></i><span class="bold">Follow</span></button>
+                                                </li>
+                                                <li>
+                                                    <button data-target="#modalWarningService"
+                                                            data-toggle="modal" class="btn btn-block btn-info btn-sm" type="button">
+                                                        <i class="fa fa-code-fork p-r-10"></i><span
+                                                            class="bold">Join project</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="pull-right">
+
+                                            <div class="p-t-25 clearfix">
+                                                <a href="" class="block pull-left">
+                                                    <div class="thumbnail-wrapper d39 circular bordered b-white bg-avatar"
+                                                         style="{{controllersproject.maintener.avatarPath | dgc_filter_avatar }}"></div>
+                                                </a>
+                                                <h4 class="no-margin text-white pull-left p-l-10"><span
+                                                        class="small-text block lh-10">Created by </span><a href=""
+                                                                                                            data-target="#modalSlideLeft"
+                                                                                                            data-toggle="modal"
+                                                                                                            class="text-white project-maintener-name lh-14"
+                                                                                                            ng-bind-html="controllersproject.maintener.name | dgc_filter_first_word_strong"></a>
+                                                </h4>
+
+                                                <!--<a href="" class="no-margin text-black link">Show
+                                                    profile</a>-->
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PROJECT HEADER -->
+
+    <!-- START PROJECT NAV-TAB -->
+    <div class="project-wrap-nav container-fluid">
+        <div class="row">
+            <div class="ol-md-12">
+                <ul class="project-wrap-nav-tabs nav nav-tabs nav-tabs-simple navbar-left" role="tablist">
+                    <li class="active">
+                        <a href="/#/projects#tabProjectHome" data-toggle="tab"
+                           ng-click="page_project_include='templates/views/include/project/dgc.page_project_home.tpl.html'"
+                           role="tab">Home</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectTicketing" data-toggle="tab"
+                           ng-click="page_project_include='templates/views/include/project/dgc.page_project_issues.tpl.html'"
+                           role="tab">Ticketing</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectWiki" data-toggle="tab" role="tab">Wiki</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectForm" data-toggle="tab" role="tab">Forum</a>
+                    </li>
+                    <!--<li>
+                        <a href="/#/projects#tabProjectIssues" data-toggle="tab" role="tab">Issues</a>
+                    </li>-->
+                    <li>
+                        <a href="/#/projects#tabProjectBlog" data-toggle="tab" role="tab">Blog</a>
+                    </li>
+                </ul>
+                <ul class="project-wrap-nav-pills nav nav-pills navbar-right">
+                    <li><a href="" data-target="#modalWarningService" data-toggle="modal"><i class="fa fa-heart"></i>Add to Favorites</a></li>
+                    <li><a href="" data-target="#modalWarningService" data-toggle="modal"><i class="fa fa-eye"></i>Follow</a></li>
+                    <!--<li>
+                        <button class="btn btn-block btn-info btn-sm" type="button">
+                            <i class="fa fa-code-fork"></i><span class="bold">Join project</span>
+                        </button>
+                    </li>-->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PROJECT NAV-TAB -->
+
+    <div class="page-project-include">
+        <div ng-include="page_project_include"></div>
+    </div>
+
+</div>

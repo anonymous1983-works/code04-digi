@@ -1,0 +1,63 @@
+<!-- START PAGE-CONTAINER -->
+<div class="login-page">
+
+  <!-- START Login Background Pic Wrapper-->
+  <section class="login-bg">
+    <aside><img src="assets/img/common/digicode.logo.svg"></aside>
+  </section>
+  <!-- END Login Background Pic Wrapper-->
+
+  <!-- START Login Right Container-->
+  <section class="login-container">
+
+    <header>
+      <img src="assets/img/common/digicode.logo.blue.svg"
+          alt="logo"
+          data-src="assets/img/logo.png"
+          data-src-retina="assets/img/logo_2x.png">
+      <p class="">Sign into your Account</p>
+    </header>
+
+    <!-- START Login Form -->
+    <form name="loginForm" ng-submit="userlog.submitLogin()" class="login-form" novalidate>
+
+        <!-- START Form Control-->
+        <article class="input">
+          <label for="login">Login</label>
+          <input id="login" type="text" placeholder="User Name" ng-model="userlog.login" ng-required="true">
+        </article>
+        <!-- END Form Control-->
+
+        <!-- START Form Control-->
+        <article class="input">
+          <label for="password">Password</label>
+          <input id="password" type="password" ng-model="userlog.password" placeholder="Credentials" ng-required="true">
+        </article>
+        <!-- END Form Control-->
+
+        <!-- error message -->
+        <p class="login-msg" ng-if="userlog.loginError">
+          Invalid credentials.
+        </p>
+
+        <button type="submit" ng-disabled="loginForm.$invalid">Sign in</button>
+    </form>
+    <!--END Login Form-->
+
+    <footer>
+        <a href="#">Help ? Contact Support</a>
+        <p>
+          Images Displayed are solely for representation purposes only,
+          <br>
+          All work copyright of © 2015
+          <br>
+          <a target="_blank" href="http://www.amundi.fr/Sites/Hub/Amundi.fr/Footer/Quicklinks/Mentions-legales">
+              Amundi </a> / Digicode.
+        </p>
+    </footer>
+
+  </section>
+  <!-- END Login Right Container-->
+
+</div>
+<!-- END PAGE CONTAINER -->

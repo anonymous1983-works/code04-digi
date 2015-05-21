@@ -1,0 +1,36 @@
+.page-container{
+  padding: 0;
+  margin: 0;
+  > .page-container-left{
+    float: left;
+  }
+  > .page-container-right{
+    overflow: hidden;
+    > .page-container-left{
+      overflow: hidden;
+    }
+    > .page-container-right{
+      float: right;
+    }
+  }
+}
+
+
+
+// Responsive
+//--------------------------------------------
+@media @base-media-extra-small {
+  body {
+    .page-container {
+      padding-top: @base-size-header-height-in-media-extra-small + @page-sub-header-height + 10;
+    }
+
+    .page-sub-header{
+      position: fixed;
+      top: @base-size-header-height-in-media-extra-small;
+      left: 0;
+      right: 0;
+      z-index: @base-z-index-1;
+    }
+  }
+}

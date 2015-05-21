@@ -1,0 +1,21 @@
+<!-- BEGIN SIDEBAR MENU HEADER-->
+<div class="sidebar-header clearfix">
+    <div class="title fs-14"><i class="fa fa-tags m-r-10"></i></i>Tags</div>
+    <!--<div class="sidebar-header-controls">
+        <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" data-pages-toggle="#appMenu"><i
+                class="fa fa-angle-down fs-16"></i>
+        </button>
+    </div>-->
+</div>
+<!-- END SIDEBAR MENU HEADER-->
+<!-- START SIDEBAR MENU -->
+<div class="sidebar-body scroll-wrapper scrollable" ng-controller="DGC_Obj.controllers.tags">
+    <!-- BEGIN SIDEBAR MENU ITEMS-->
+    <ul class="list-unstyled scrollbar-macosx">
+        <li ng-repeat="tag in tags"><a class="link" ng-href="{{tag.keyword | dgc_filter_url_search}}">{{tag.keyword}}<span class="count">({{tag.count}})</span></a></li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+<!-- END SIDEBAR MENU -->
+
+

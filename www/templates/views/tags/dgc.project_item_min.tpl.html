@@ -1,0 +1,81 @@
+<div class="panel panel-default panel-project clearfix" data-json="project.id" data-project-item-id="{{project.id}}"
+     id="project-item-id-{{project.id}}">
+    <div class="panel-heading ">
+        <div class="panel-controls">
+            <ul>
+                <li>
+                    <a href="" class="fa fa-cog" data-toggle="refresh" data-project="{{project}}" ng-click="DGC_ObjMainAction_createJsonProject($event)"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="block b-b b-grey p-b-10">
+            <div class="container-xs-height ">
+                <div class="row-xs-height">
+                    <div class="project-thumbnail col-xs-height text-center col-top">
+                        <div class="thumbnail-wrapper d58 circular bordered">
+                            <a ng-href="{{project.id | dgc_filter_url_project}}" class="block bg-icon-project" style="background-image: url('http://dev-digicode.intramundi.com/digicode/api/projects/{{project.id}}/icon')"></a>
+                        </div>
+                    </div>
+                    <div class="project-write col-xs-height p-l-10">
+                        <h5 class="title project-name"><a ng-href="{{project.id | dgc_filter_url_project}}"> <span class="semi-bold" data-json="project.name">{{project.name}}</span></a>
+                            <!--  <i class="fa pull-right p-t-5 {{(project.id == 614) ? 'fa-globe text-success' : 'fa-luck'}}"></i> -->
+                        </h5>
+
+                        <div class="no-margin lh-normal project-description" data-json="project.summary">
+                            <div class="text">{{project.summary}}</div>
+                            <a href="" ng-click="DGC_ObjProjectAction_more($event)" class="more">...</a> </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-body">
+        <div class="block clearfix block-indicateur-list clearfix b-b b-grey p-b-10">
+            <ul class="indicateur-list list-horizontal navbar-right">
+                <li ng-repeat="environment in project.environment">
+                    <a ng-href="{{environment.url}}" data-toggle="tooltip" data-original-title="{{environment.tool}}" target="_blank"><i
+                            class="fa " ng-class="environment.type | dgc_filter_environment_class"></i><span>{{ $index | dgc_filter_environment_note_test}}</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="block clearfix block-user">
+            <div class="container-xs-height">
+                <div class="row-xs-height">
+                    <div class="social-user-profile col-xs-height text-center col-top">
+                        <div class="thumbnail-wrapper d32 circular bordered b-success">
+                            <a href="" class="block bg-avatar" style="{{project.maintener.avatarPath | dgc_filter_avatar: project.maintener.name }}"></a>
+
+                        </div>
+                    </div>
+                    <div class="social-user-write col-xs-height p-l-10 v-align-middle">
+                        <a href=""
+                           class="text-master name fs-14 block lh-16">{{project.maintener.name}}</a>
+
+                        <a href=""
+                           class="small-text text-pink link fs-11 block lh-13">Show
+                            profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block clearfix block-tags">
+            <div class="clearfix">
+                <!--<div class="title pull-left">Tags :</div>-->
+                <ul class="tag-list list-horizontal">
+                    <li ng-repeat="tag in project.keywords | limitTo : DGC_Obj.utils.project.taglimit : 0">
+                        <a class="btn btn-tag btn-tag-dark btn-tag-rounded"
+                           ng-href="{{tag | dgc_filter_url_search}}">{{tag}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="block clearfix  block-language">
+            <ul class="language-list tag-list separator list-horizontal">
+                <li class="title">Language</li>
+                <li ng-repeat="lang in project.languages | limitTo : DGC_Obj.utils.project.langaguelimit : 0"><a class="btn btn-tag btn-tag-dark btn-tag-rounded" ng-href="{{lang | dgc_filter_url_search}}">{{lang}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

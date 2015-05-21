@@ -1,0 +1,213 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+
+        <!--<div class="thumbnail-wrapper d78 circular bordered b-white bg-avatar avatar-project-sidebar-stat" style="background-image: url('http://dev-digicode.intramundi.com/digicode/api/projects/{{controllersproject.id}}/icon')"></div>
+        <h5 class="text-center">{{controllersproject.name}}</h5>-->
+
+        <div class="panel stats-now">
+            <a ng-href="{{controllersproject.demo}}" target="_blank" type="button"
+                    class="btn btn-xxlg btn-pink btn-cons btn-animated from-left fa fa-eye full-width m-b-20" ng-disabled="!controllersproject.demo">
+                <span>Demo</span>
+            </a>
+            <a href="{{controllersproject.homepage}}" target="_blank"
+                    class="btn btn-xxlg btn-info btn-cons btn-animated from-top fa fa-arrow-down full-width" ng-disabled="!controllersproject.homepage">
+                <span>Download</span>
+            </a>
+        </div>
+
+        <ul class="panel stats-infos nav">
+            <li><a class="" href=""><i class="fa fa-flask"></i>Current Version :<span class="v">{{controllersproject.version}}</span></a></li>
+            <li><a class="" href=""><i class="fa fa-calendar-o"></i>Date Creation :<span
+                    class="v">{{controllersproject.creationDate | date : format : timezone}}</span></a></li>
+            <li><a class="" href=""><i class="fa fa-calendar"></i>Date Last Activity :<span
+                    class="v">{{controllersproject.lastActivityDate | date : format : timezone}}</span></a></li>
+            <li><a class="" href=""><i class="fa fa-file-text-o"></i>Statut
+                :<span
+                        class="v" ng-style="controllersproject.healthStatus | dgc_filter_level_color"  >{{controllersproject.healthStatus / 20}} / 5</span></a></li>
+            <li><a class="" href="https://git.intramundi.com/gitlab/activeframework/activecomputer/repository/archive.zip"><i class="fa fa-download"></i>Téléchargements
+                :<span class="v">##</span></a></li>
+        </ul>
+
+        <div class="panel stats-tags clearfix" ng-show="controllersproject.keywords.length">
+            <div class="panel-heading separator">
+                <div class="panel-title">
+                    <h5 class="text-transform-none no-margin">
+                        <span class="semi-bold">Tags</span> List</h5>
+                </div>
+            </div>
+            <ul class="tag-list list-horizontal">
+                <li ng-repeat="tag in controllersproject.keywords">
+                    <a class="btn btn-tag btn-tag-dark btn-tag-rounded"
+                       ng-href="{{tag | dgc_filter_url_search}}">{{tag}}</a></li>
+            </ul>
+        </div>
+
+        <div class="panel stats-workers clearfix">
+            <div class="panel-heading separator">
+                <div class="panel-title">
+                    <h5 class="text-transform-none no-margin">
+                        <span class="semi-bold">Workers</span> List</h5>
+                </div>
+            </div>
+            <ul class="list-unstyled no-margin">
+                <li class="m-r-10">
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-success m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/1x.jpg"
+                             data-src="media/people/80/1.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/1.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-success m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/2x.jpg"
+                             data-src="media/people/80/2.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/2.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-warning m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/3x.jpg"
+                             data-src="media/people/80/3.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/3.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-danger m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/4x.jpg"
+                             data-src="media/people/80/4.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/4.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-info-lighter m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/5x.jpg"
+                             data-src="media/people/80/5.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/5.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-info-lighter m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/6x.jpg"
+                             data-src="media/people/80/6.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/6.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""
+                       class="block thumbnail-wrapper d32 circular b-info-lighter m-r-5 b-a bordered">
+                        <img width="35" height="35"
+                             data-src-retina="media/people/80/7x.jpg"
+                             data-src="media/people/80/7.jpg"
+                             alt="Profile Image"
+                             src="media/people/35/7.jpg">
+                    </a>
+                </li>
+                <li>
+                    <div class="thumbnail-wrapper d32 circular b-white bordered">
+                        <a href=""
+                           class="bg-master text-center text-white block"><span>+34</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div data-pages="portlet" class="panel stats-comments">
+            <div class="panel-heading separator">
+                <div class="panel-title">
+                    <h5 class="text-transform-none no-margin">
+                        Last <span class="semi-bold">Comment</span></h5>
+                </div>
+                <div class="panel-controls">
+                    <ul>
+                        <li><a data-toggle="collapse" class="portlet-collapse" href=""><i
+                                class="fa fa-angle-up"></i></a>
+                        </li>
+                        <li><a data-toggle="close" class="portlet-close" href=""><i
+                                class="portlet-icon portlet-icon-close"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled items">
+                    <li class="item m-b-10" ng-repeat="evnet in controllersprojectevents.list | limitTo: controllersprojectevents.limit ">
+                        <div class="container-xs-height">
+                            <div class="row-xs-height">
+                                <div class="col-xs-height">
+                                    <div class="clearfix p-b-5">
+                                        <a href="" class="thumbnail-wrapper d39 circular bordered b-success bg-avatar m-r-10" style="{{evnet.user.avatarPath | dgc_filter_avatar: evnet.user.name }}">
+                                        </a>
+                                        <div class="clearfix  p-t-10">
+                                            <h6 class="no-margin lh-12 fs-14"><a href="" class="text-master ">{{evnet.user.name}}</a></h6>
+                                            <!--<a href=""
+                                               class="small-text text-pink link">Show
+                                                profile</a>-->
+                                            <span class="hint-text fs-10 block lh-12">{{evnet.creationDate | date : format : timezone}}</span>
+                                        </div>
+                                    </div>
+                                    <pre class=" comment-text no-margin fs-12 lh-normal">{{evnet.message}}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <a href="" class="btn btn-block btn-primary" ng-click="moreevents(DGC_Obj.utils.project.event.step)" ng-hide="controllersprojectevents.limit >= controllersprojectevents.list.length"> <!--<span class="pull-left"><i class="fa fa-spinner fa-spin"></i></span>--> More comments</a>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div data-pages="portlet" class="panel stats-charts">
+
+            <div class="panel-heading separator">
+                <div class="panel-title">
+                    <h5 class="text-transform-none no-margin">
+                        Project <span class="semi-bold">Commit/Buil</span></h5>
+                </div>
+                <div class="panel-controls">
+                    <ul>
+                        <li><a data-toggle="collapse" class="portlet-collapse" href=""><i
+                                class="fa fa-angle-up"></i></a>
+                        </li>
+                        <li><a data-toggle="refresh" class="portlet-refresh" href=""><i
+                                class="fa fa-circle-o fs-11"></i></a>
+                        </li>
+                        <li><a data-toggle="close" class="portlet-close" href=""><i
+                                class="portlet-icon portlet-icon-close"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <!-- START WIDGET -->
+                <div class="sidebar-stats-widget-charts panel no-border  no-margin widget-loader-circle">
+                    <div class="relative">
+                        <div class="chart-commit-build line-chart" id="id-sswcccb" >
+                            <svg></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- END WIDGET -->
+            </div>
+        </div>
+
+    </div>
+</div>

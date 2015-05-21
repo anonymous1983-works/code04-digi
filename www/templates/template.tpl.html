@@ -1,0 +1,26 @@
+<!-- BEGIN SIDEBPANEL-->
+<dgc-sidebar-left class="page-sidebar page-sidebar-left" data-pages="sidebar"></dgc-sidebar-left>
+<!-- END SIDEBPANEL-->
+
+<div class="view-digicode-container page-container">
+    <section class="view-section-body page-container">
+
+        <dgc-header ng-controller="DGC_Obj.controllers.header"></dgc-header>
+
+        <!-- START PAGE CONTENT WRAPPER -->
+        <div class="page-content-wrapper">
+            <!-- START PAGE CONTENT -->
+            <div class="content">
+                <div id="portlet-advance" class="panel panel-default page-portlet-loader">
+                    <div class="panel-body no-padding no-margin">
+                        <div ng-include="view.url"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- BEGIN SIDEBRIGHT-->
+<dgc-sidebar-right class=" page-sidebar-right right" data-pages="sidebar-right"></dgc-sidebar-right>
+<!-- END SIDEBRIGHT-->

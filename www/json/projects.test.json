@@ -1,0 +1,200 @@
+[
+  {
+    "name": "ActiveComputer",
+    "id": null,
+    "type": "library",
+    "description": "ActiveComputer is a API designed to handle pricing and other Computer activities. The library provides tools to run computations in service, queue and batch mode.",
+    "version": null,
+    "environment": null,
+    "languages": null,
+    "idDs": "614",
+    "idGroup": null,
+    "demo": null,
+    "homepage": "https://git.intramundi.com/gitlab/activeframework/activecomputer/wikis/home",
+    "maintener": null,
+    "keywords": [
+      "pricing",
+      "computations"
+    ],
+    "licence": null
+  },
+  {
+    "name": "ActiveDictionary",
+    "id": null,
+    "type": "library",
+    "description": "ActiveDictionary is a complete application to create and manage a Data Governance cross referentials.",
+    "version": null,
+    "environment": [
+      {
+        "type": "code_quality",
+        "tool": "sonar",
+        "url": "https://dtp.intramundi.com/sonar/dashboard/index/247994",
+        "resource_id": "247994"
+      },
+      {
+        "type": "issues",
+        "tool": "mantis",
+        "url": "http://mantis.intramundi.com/etudes",
+        "resource_id": null
+      },
+      {
+        "type": "continuous_integration",
+        "tool": "jenkins",
+        "url": "https://dtp.intramundi.com/jenkins/job/ActiveDictionary%20-%20DEV%20-%20Build/",
+        "resource_id": null
+      },
+      {
+        "type": "repo",
+        "tool": "nexus",
+        "url": "https://dtp.intramundi.com/nexus",
+        "resource_id": null
+      },
+      {
+        "type": "scm",
+        "tool": "git",
+        "url": "https://git.intramundi.com/gitlab/activeframework/activedictionary.git",
+        "resource_id": null
+      }
+    ],
+    "languages": [
+      "java"
+    ],
+    "idDs": "710",
+    "idGroup": null,
+    "demo": null,
+    "homepage": "https://git.intramundi.com/gitlab/activeframework/activedictionary/wikis/home",
+    "maintener": null,
+    "keywords": [
+      "data",
+      "governance",
+      "java",
+      "angularjs",
+      "referential"
+    ],
+    "licence": null
+  },
+  {
+    "name": "Adnet",
+    "id": null,
+    "type": "application",
+    "description": "Tools for network administration. Checks VLAN, Checks DHCP",
+    "version": null,
+    "environment": [
+      {
+        "type": "code_quality",
+        "tool": "sonar",
+        "url": "https://dtp.intramundi.com/sonar/dashboard/index/190030",
+        "resource_id": "190030"
+      },
+      {
+        "type": "continuous_integration",
+        "tool": "jenkins",
+        "url": "https://dtp.intramundi.com/jenkins/view/QOA/view/Adnet/job/Adnet%20-%20RCT%20-%20Publish%20Manual",
+        "resource_id": null
+      }
+    ],
+    "languages": [
+      "java",
+      "JSP"
+    ],
+    "idDs": "759",
+    "idGroup": null,
+    "demo": "https://dev-adnet.intramundi.com/adnet",
+    "homepage": "https://git.intramundi.com/gitlab/qoa/adnet",
+    "maintener": null,
+    "keywords": [
+      "utilities",
+      "java",
+      "JSP",
+      "network"
+    ],
+    "licence": null
+  },
+  {
+    "name": "ActiveComputer",
+    "id": null,
+    "type": "library",
+    "description": "ActiveComputer is a API designed to handle pricing and other Computer activities. The library provides tools to run computations in service, queue and batch mode.",
+    "version": null,
+    "environment": [
+      {
+        "type": "code_quality",
+        "tool": "sonar",
+        "url": "https://dtp.intramundi.com/sonar/dashboard/index/271183",
+        "resource_id": "271183"
+      },
+      {
+        "type": "continuous_integration",
+        "tool": "jenkins",
+        "url": "https://dtp.intramundi.com/jenkins/view/ActiveFwk/view/ActiveComputer/view/DEV/job/Active-computer-core%20-%20DEV%20-%20Build%20and%20publish/",
+        "resource_id": null
+      }
+    ],
+    "languages": [
+      "java"
+    ],
+    "idDs": "771",
+    "idGroup": null,
+    "demo": null,
+    "homepage": "https://git.intramundi.com/gitlab/activecomputer/computer-core/",
+    "maintener": null,
+    "keywords": [
+      "computations",
+      "library",
+      "active framework"
+    ],
+    "licence": null
+  },
+  {
+    "name": "ActiveToolsJava",
+    "id": null,
+    "type": "library",
+    "description": "ActiveToolsJava is a light-weight collection of common utility classes in Java.",
+    "version": null,
+    "environment": [
+      {
+        "type": "code_quality",
+        "tool": "sonar",
+        "url": "https://dtp.intramundi.com/sonar/dashboard/index/todo",
+        "resource_id": "todo"
+      },
+      {
+        "type": "issues",
+        "tool": "mantis",
+        "url": "http://mantis.intramundi.com/etudes",
+        "resource_id": null
+      },
+      {
+        "type": "continuous_integration",
+        "tool": "jenkins",
+        "url": "https://dtp.intramundi.com/jenkins/job/todo/",
+        "resource_id": null
+      },
+      {
+        "type": "repo",
+        "tool": "nexus",
+        "url": "https://dtp.intramundi.com/nexus",
+        "resource_id": null
+      },
+      {
+        "type": "scm",
+        "tool": "git",
+        "url": "https://git.intramundi.com/gitlab/activeframework/activetools-java.git",
+        "resource_id": null
+      }
+    ],
+    "languages": [
+      "java"
+    ],
+    "idDs": "976",
+    "idGroup": null,
+    "demo": null,
+    "homepage": "https://git.intramundi.com/gitlab/activeframework/activetools-java",
+    "maintener": null,
+    "keywords": [
+      "utilities",
+      "java"
+    ],
+    "licence": null
+  }
+]

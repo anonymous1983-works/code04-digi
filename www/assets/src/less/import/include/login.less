@@ -1,0 +1,94 @@
+// Variables
+// --------------------------------------------------
+// --------------------------------------------------
+
+main, .login-page {
+  height: 100%;
+}
+.login-page {
+  .clearfix;
+}
+  .login-bg {
+    background: url(../../img/login/digicode-bg.jpg) no-repeat right center;
+    background-size: cover;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 55%;
+    aside {
+      background: rgba(0, 0, 0, 0.5);
+      bottom: 5em;
+      left: 0;
+      padding: 1.5em 0 1.5em 2em;
+      position: absolute;
+      width: 100%;
+      img {
+        height: auto;
+        width: 60%;
+      }
+    }
+  }
+  .login-container {
+    float: left;
+    padding: 3em 3em 1em;
+    width: 45%;
+    header {
+      margin: 0 0 2em;
+      p {
+        font-size: 0.85em;
+        margin: -0.6em 0 0;
+      }
+    }
+    button {
+      background: @base-color-blue;
+      border: 0;
+      border-radius: 0.3em;
+      color:  @base-color-white;
+      cursor: pointer;
+      margin: 2em 0;
+      padding: 0.7em 3em;
+    }
+    footer {
+      font-size: 0.75em;
+      a {
+        color: @base-color-blue;
+        display: inline;
+      }
+    }
+
+    .input {
+      border: 1px solid @base-color-lightest;
+      border-radius: 0.3em;
+      padding: 1em 1em 0.5em;
+      margin: 0 0 2em;
+      label {
+        display: block;
+        font-size: 0.75em;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      input {
+        border-color: @base-color-light;
+        border-style: solid;
+        border-width: 0 0 1px;
+        font-size: 1em;
+        padding: 0.8em 0 0.3em;
+        width: 100%;
+      }
+    }
+
+    .login-msg {
+      color: @base-color-red;
+      font-weight: bold;
+    }
+  }
+
+@media screen and (max-width: 640px) {
+  .login-bg {
+    background: none;
+    display: none;
+  }
+  .login-container {
+    width: 100%;
+  }
+}

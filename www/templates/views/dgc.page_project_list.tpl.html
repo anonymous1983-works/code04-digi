@@ -1,0 +1,64 @@
+<div class="view-project-content">
+
+    <!-- START PROJECT NAV-TAB -->
+    <div class="project-wrap-nav container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="project-wrap-nav-filter">
+                    <h5 class="title text-white pull-left">List of projects</h5>
+
+                    <div class="types pull-left">
+                        <div class="checkbox check-success pull-left" ng-repeat="type in DGC_Obj.utils.project.json.type">
+                            <input type="checkbox" checked="checked" value="{{type}}" id="checkbox-type-{{type}}">
+                            <label for="checkbox-type-{{type}}" class="text-white">{{type}}</label>
+                        </div>
+                        <div class="block p-l-20 pull-left"></div>
+                    </div>
+                    <!--<div class="order pull-left">
+                        <select class="form-control">
+                            <option value="">Order by</option>
+                            <option value="date-desc">Date DESC</option>
+                            <option value="date-as">Date AS</option>
+                        </select>
+                    </div>-->
+                    <!--<div class="tags btns pull-right">
+                        <a href="" class="btn btn-complete" data-toggle="button"><i class="fa fa-tags"></i></a>
+                    </div>-->
+                    <div class="display btns options btn-group pull-right">
+                        <a class="btn" href="" ng-click="DGC_ObjProjectAction_updateShowProject(DGC_Obj.utils.project.show.grid)" data-ng-class="{'active' : _DGC_showProjectGridList == DGC_Obj.utils.project.show.grid}" data-toggle="tooltip" data-original-title="Show Grid"><i class="fa fa-th"></i></a>
+                        <a class="btn" href="" ng-click="DGC_ObjProjectAction_updateShowProject(DGC_Obj.utils.project.show.list)" data-ng-class="{'active' : _DGC_showProjectGridList == DGC_Obj.utils.project.show.list}" data-toggle="tooltip" data-original-title="Show List"><i class="fa fa-list"></i></a>
+                    </div>
+                    <!--<div class="search pull-right">
+                        <div class=" input-group transparent">
+                            <input type="text" class="form-control" ng-model="inputFilterQuery" placeholder="Type anywhere to filter project" id="input-filter-query" name="input-filter-query">
+                            <span class="input-group-addon bg-white "><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PROJECT NAV-TAB -->
+    <!-- START PROJECT BODY -->
+    <div class="project-wrap-body container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="panel panel-transparent panel-project-wrap-body " ng-class="_DGC_showProjectGridList">
+                    <div class="panel-body no-padding">
+                        <div class="row">
+                            <div class="panel-project-wrap-body-container" id="panel-project-wrap-body-container">
+                                <div class="col-md-3 item item-min-project" data-type="{{project.type}}" ng-repeat="project in controllersproject | filter:inputFilterQuery" on-finish-render="ngRepeatFinished">
+                                    <dgc-project-item-min class="{{project.type}} {{ (project.type == DGC_Obj.utils.project.json.type.application) ? 'project-type-application' : 'project-type-library'}}"></dgc-project-item-min>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END PROJECT BODY -->
+</div>

@@ -1,0 +1,65 @@
+
+<section class="">
+
+    <!-- SUB HEADER -->
+    <section id="page-sub-header" class="page-sub-header global-filter clearfix">
+        <div class="filter-group btn-group">
+
+            <div class="content">
+
+              <input type="radio" ng-model="list.projectFilterType" id="option-filter-all" value="">
+              <label class="btn active" for="option-filter-all">All</label>
+
+              <input type="radio" ng-model="list.projectFilterType" id="option-filter-application" value="application">
+              <label class="btn" for="option-filter-application">Application</label>
+
+              <input type="radio" ng-model="list.projectFilterType" id="option-filter-library" value="library">
+              <label class="btn" for="option-filter-library">Library</label>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SUB HEADER -->
+
+    <!-- PROJECT LIST -->
+    <section class="page-collection-container">
+
+        <div class="collection-list">
+
+          <div class="collection"
+               ng-repeat="project in list.projects | filter:list.projectFilterType">
+
+            <header class="header" am-trianglify='{"name": "{{project.name}}"}'>
+              <a ui-sref="main.detail({projectId: project.id, reload: true})"
+                 class="image circular" am-load-icon="{{project.id}}"></a>
+
+              <a ui-sref="main.detail({projectId: project.id, reload: true})" class="title">
+                <h3>{{project.name}}</h3>
+              </a>
+            </header>
+
+            <div class="body clearfix">
+              <p class="summary">
+                {{project.summary}}
+              </p>
+            </div>
+
+            <div class="meta clearfix">
+              <ul>
+                <am-indicator title="Sonar" type="dashboard" value="53"></am-indicator>
+                <am-indicator title="Jenkins" type="refresh" value="41"></am-indicator>
+                <am-indicator title="Likes" type="thumbs-up" value="15" class="right"></am-indicator>
+                <am-indicator title="Favorites" type="heart" value="25" class="right"></am-indicator>
+                <am-indicator title="Follows" type="eye" value="20" class="right"></am-indicator>
+              </ul>
+            </div>
+
+          </div>
+
+      </div>
+    </section>
+    <!-- PROJECT LIST -->
+
+</section>
